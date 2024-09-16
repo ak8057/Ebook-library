@@ -6,7 +6,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%@page isELIgnored="false"%>
-<<%-- %@page import="com.connection.DBConnection"%> --%>
+<%-- %@page import="com.connection.DBConnection"%> --%>
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
