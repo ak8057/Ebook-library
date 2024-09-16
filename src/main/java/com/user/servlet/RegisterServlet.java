@@ -64,20 +64,20 @@
 //}
 //
 //}
-
 package com.user.servlet;
 
 import java.io.IOException;
 
 import com.entity.User;
-import com.DAO.*;
-import com.DB.*;
+import com.DAO.UserDAOimpl;
+import com.DB.DBConnect;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
@@ -91,34 +91,57 @@ public class RegisterServlet extends HttpServlet {
             String password = request.getParameter("password");
             String checkBox = request.getParameter("checkBox");
 
-            System.out.println(name + " " + email + " " + number + " " + password + " " + checkBox);
+            // Session to store error or success messages
+            HttpSession session = request.getSession();
 
+            // Validate input fields
+            if (name == null || name.isEmpty()) {
+                session.setAttribute("failedMsg", "Name is required");
+                response.sendRedirect("register.jsp");
+                return;
+            }
+
+            if (email == null || email.isEmpty()) {
+                session.setAttribute("failedMsg", "Email is required");
+                response.sendRedirect("register.jsp");
+                return;
+            }
+
+            if (number == null || number.isEmpty()) {
+                session.setAttribute("failedMsg", "Phone number is required");
+                response.sendRedirect("register.jsp");
+                return;
+            }
+
+            if (password == null || password.isEmpty()) {
+                session.setAttribute("failedMsg", "Password is required");
+                response.sendRedirect("register.jsp");
+                return;
+            }
+
+            if (checkBox == null) {
+                session.setAttribute("failedMsg", "Please agree to the terms and conditions");
+                response.sendRedirect("register.jsp");
+                return;
+            }
+
+            // If all inputs are valid, proceed to registration
             User us = new User();
             us.setEmail(email);
             us.setPassword(password);
             us.setName(name);
             us.setPhno(number);
-            
-            
-            UserDAOimpl dao= new UserDAOimpl(DBConnect.getConn());
-            boolean f= dao.userRegister(us);
-            if(f) {
-            	System.out.println("User register success..");
+
+            UserDAOimpl dao = new UserDAOimpl(DBConnect.getConn());
+            boolean f = dao.userRegister(us);
+
+            if (f) {
+                session.setAttribute("succMsg", "User registered successfully!");
+                response.sendRedirect("register.jsp");
+            } else {
+                session.setAttribute("failedMsg", "Something went wrong on the server...");
+                response.sendRedirect("register.jsp");
             }
-            else {
-            	System.out.println("Something wrong on server...");	
-            }
-            
-            
-            
-            // Your registration logic here
-            // For now, we'll just send a response back
-            response.setContentType("text/html");
-            response.getWriter().println("<h2>Registration data received:</h2>");
-            response.getWriter().println("<p>Name: " + name + "</p>");
-            response.getWriter().println("<p>Email: " + email + "</p>");
-            response.getWriter().println("<p>Number: " + number + "</p>");
-            response.getWriter().println("<p>Terms accepted: " + (checkBox != null ? "Yes" : "No") + "</p>");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -131,6 +154,8 @@ public class RegisterServlet extends HttpServlet {
         response.sendRedirect("register.jsp");
     }
 }
+
+
 
 
 
