@@ -1,8 +1,4 @@
-<%-- 
-    Document   : cart
-    Created on : Mar 11, 2022, 10:32:15 PM
-    Author     : MeGa
---%>
+
 <%@page import="java.util.List"%>
 <%@page import="com.model.Cart"%>
 <%@page import="com.model.User"%>

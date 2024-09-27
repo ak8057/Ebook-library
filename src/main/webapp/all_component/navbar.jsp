@@ -1,20 +1,50 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page isELIgnored="false" %> 
-<div class="container-fluid" style="height: 10px; background-color: #303f9f">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 
-</div> 
-<div class="container-fluid p-3 btn-light">
-    <div class="row">
-        <div class="col-md-3 text-success">
-            <h3><i class="fa-solid fa-book"></i> E-Book Store</h3>
-        </div>
-        <div class="col-md-6">
-            <form class="form-inline my-2 my-lg-0" method="post" action="search.jsp">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="ch">
-                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-       <%--<c:if test="${not empty userobj}"> 
+<script src="https://kit.fontawesome.com/d15d3f3672.js" crossorigin="anonymous"></script>
+
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap')
+	;
+
+.new {
+	margin-top: 2rem;
+}
+
+h3 {
+	font-family: "Bowlby One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.stick {
+	position: sticky;
+	top: 0px;
+	z-index: 10;
+	/*background-color:grey;*/
+}
+</style>
+
+<div class="container-fluid"
+	style="height: 5px; background-color: #303f9f"></div>
+<div class="stick container-fluid p-3 btn-light">
+	<div class="row">
+		<div class="new col-md-3 text-success">
+			<h3>
+				<i class="fa-solid fa-worm fa-bounce fa-lg" style="color: #4943a3;"></i>
+				BookWorm
+			</h3>
+		</div>
+		<div class="new col-md-6">
+			<form class="form-inline my-2 my-lg-0" method="post"
+				action="search.jsp">
+				<input class="form-control mr-sm-2" type="search"
+					placeholder="Search" aria-label="Search" name="ch">
+				<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
+		<%--<c:if test="${not empty userobj}"> 
             <div class="col-md-3">
                 <a href="checkout.jsp"><i class="fas fa-cart-plus fa-2x"></i></a>
                 <a href="setting_page.jsp" class="btn btn-success"><i class="fa-solid fa-user"></i> ${userobj.name}</a>
@@ -22,43 +52,53 @@
             </div>
         </c:if>
 
-        <c:if test="${empty userobj}">--%> 
-            <div class="col-md-3">
-              <%-- --%>  <a href="login.jsp" class="btn btn-success"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
-                <a href="register.jsp" class="btn btn-primary text-white"><i class="fa-solid fa-user-plus"></i> Register</a>
-            </div>
-      <%--  </c:if> --%> 
+        <c:if test="${empty userobj}">--%>
+		<div class=" new col-md-3">
+			<%-- --%>
+			<a href="login.jsp" class="btn btn-success"><i
+				class="fa-solid fa-right-to-bracket"></i> Login</a> <a
+				href="register.jsp" class="btn btn-primary text-white"><i
+				class="fa-solid fa-user-plus"></i> Register</a>
+		</div>
+		<%--  </c:if> --%>
 
-    </div>
+	</div>
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
-    <a class="navbar-brand" href="index.jsp"><i class="fa-solid fa-house"></i></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+	<a class="navbar-brand" href="index.jsp"><i
+		class="fa-solid fa-house"></i></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarSupportedContent"
+		aria-controls="navbarSupportedContent" aria-expanded="false"
+		aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.jsp">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="all_recent_books.jsp"><i class="fa-solid fa-book-open"></i> Recent Books</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="all_new_books.jsp"><i class="fa-solid fa-book-open"></i> New Books</a>
-            </li>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active"><a class="nav-link" href="index.jsp">Home
+					<span class="sr-only">(current)</span>
+			</a></li>
+			<li class="nav-item"><a class="nav-link active"
+				href="all_recent_books.jsp"><i class="fa-solid fa-book-open"></i>
+					Recent Books</a></li>
+			<li class="nav-item"><a class="nav-link active"
+				href="all_new_books.jsp"><i class="fa-solid fa-book-open"></i>
+					New Books</a></li>
 
-            <li class="nav-item">
-                <a class="nav-link active" href="all_old_books.jsp"><i class="fa-solid fa-book-open"></i> Old Books</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <a href="setting_page.jsp" class="btn btn-light my-2 my-sm-0"><i class="fa-solid fa-gear"></i> Setting</a>
-            <button class="btn btn-light my-2 my-sm-0 ml-1" type="submit"><i class="fa-solid fa-address-book"></i> Contact Us</button>
-        </form>
-    </div>
+			<li class="nav-item"><a class="nav-link active"
+				href="all_old_books.jsp"><i class="fa-solid fa-book-open"></i>
+					Old Books</a></li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<a href="setting_page.jsp" class="btn btn-light my-2 my-sm-0"><i
+				class="fa-solid fa-gear"></i> Setting</a>
+			<button class="btn btn-light my-2 my-sm-0 ml-1" type="submit">
+				<i class="fa-solid fa-address-book"></i> Contact Us
+			</button>
+		</form>
+	</div>
 </nav>
 
 <!--logout model-->

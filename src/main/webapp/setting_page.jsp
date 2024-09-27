@@ -1,8 +1,4 @@
-<%-- 
-    Document   : setting_page
-    Created on : Mar 12, 2022, 1:02:34 AM
-    Author     : MeGa
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

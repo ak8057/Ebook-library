@@ -1,8 +1,4 @@
-<%-- 
-    Document   : order_success_page
-    Created on : Mar 13, 2022, 4:17:07 PM
-    Author     : MeGa
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : all_recent_books
-    Created on : Mar 11, 2022, 1:33:27 PM
-    Author     : MeGa
---%>
+>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page import="java.util.List"%>

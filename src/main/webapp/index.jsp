@@ -16,7 +16,7 @@
 <style>
 .back-img {
 	background: url("img/Illustrada-Portfolio-Banner-2022-09-16.jpg");
-	height: 57vh;
+	height: 80vh;
 	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -35,6 +35,18 @@
 	color: #303f9f;
 	border-radius: 15px;
 }
+
+.container {
+	max-width: 90rem;
+}
+
+.row {
+	display: flex;
+	max-height: 60vh;
+	flex-direction: row;
+	overflow-x: auto;
+	flex-wrap: nowrap;
+}
 </style>
 </head>
 <body>
@@ -48,16 +60,338 @@
 		%>
 	</div>
 
+	<!--start recent book-->
+	<div class="container">
+		<h1 class="text-center mt-2">
+			<i class="fa-solid fa-book"></i> Recent Book
+		</h1>
+		<div class="row"
+			style="display: flex; overflow-x: auto; white-space: nowrap;">
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 1
+						</p>
+						<p>
+							<b>Author: </b>Author 1
+						</p>
+						<p>
+							<b>Category: </b>Category 1
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=1"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 499</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 2
+						</p>
+						<p>
+							<b>Author: </b>Author 2
+						</p>
+						<p>
+							<b>Category: </b>Category 2
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=2"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 599</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 3
+						</p>
+						<p>
+							<b>Author: </b>Author 3
+						</p>
+						<p>
+							<b>Category: </b>Category 3
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=3"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 699</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 4
+						</p>
+						<p>
+							<b>Author: </b>Author 4
+						</p>
+						<p>
+							<b>Category: </b>Category 4
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=4"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 399</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 5
+						</p>
+						<p>
+							<b>Author: </b>Author 5
+						</p>
+						<p>
+							<b>Category: </b>Category 5
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=5"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 499</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 5
+						</p>
+						<p>
+							<b>Author: </b>Author 5
+						</p>
+						<p>
+							<b>Category: </b>Category 5
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=5"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 499</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 5
+						</p>
+						<p>
+							<b>Author: </b>Author 5
+						</p>
+						<p>
+							<b>Category: </b>Category 5
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=5"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 499</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 5
+						</p>
+						<p>
+							<b>Author: </b>Author 5
+						</p>
+						<p>
+							<b>Category: </b>Category 5
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=5"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 499</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<div class="col-md-3" style="flex: 0 0 auto; margin-right: 10px;">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample Book 5
+						</p>
+						<p>
+							<b>Author: </b>Author 5
+						</p>
+						<p>
+							<b>Category: </b>Category 5
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=5"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 499</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Add more book items similarly -->
+		</div>
+		<div class="text-center mt-1">
+			<a href="all_recent_books.jsp"
+				class="btn btn-danger btn-block text-white">View All</a>
+		</div>
+	</div>
+	<!--end recent book-->
+
+	<hr>
+	<!--start new book-->
+	<div class="container">
+		<h1 class="text-center mt-2">
+			<i class="fa-solid fa-book"></i> New Book
+		</h1>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Sample New Book
+						</p>
+						<p>
+							<b>Author: </b>New Author
+						</p>
+						<p>
+							<b>Category: </b>New Category
+						</p>
+						<div class="row text-center">
+							<a href="login.jsp" class="btn btn-danger btn-sm ml-3"><i
+								class="fa-solid fa-cart-plus"></i> Add Cart</a> <a
+								href="view_book_details.jsp?id=2"
+								class="btn btn-success btn-sm ml-1">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 699</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Add more book items similarly -->
+		</div>
+		<div class="text-center mt-1">
+			<a href="all_new_books.jsp"
+				class="btn btn-danger btn-block text-white">View All</a>
+		</div>
+	</div>
+	<!--end new book-->
+	<hr>
+	<!--start old book-->
+	<div class="container">
+		<h1 class="text-center mt-2">
+			<i class="fa-solid fa-book"></i> Old Book
+		</h1>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card crd-ho">
+					<div class="card-body text-center">
+						<img src="book/javabook.jpg" alt=""
+							style="width: 150px; height: 200px;" class="img-thumblin" />
+						<p>
+							<b>Name: </b>Old Book Name
+						</p>
+						<p>
+							<b>Author: </b>Old Author
+						</p>
+						<p>
+							<b>Category: </b>Old Category
+						</p>
+						<div class="row text-center">
+							<a href="view_book_details.jsp?id=3"
+								class="btn btn-success btn-sm ml-5">Details</a>
+							<button class="btn btn-danger btn-sm ml-1">&#8360;. 299</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Add more book items similarly -->
+		</div>
+		<div class="text-center mt-1">
+			<a href="all_old_books.jsp"
+				class="btn btn-danger btn-block text-white">View All</a>
+		</div>
+	</div>
+	<!--end old book-->
+	<hr>
+
+
 
 	<%@include file="all_component/footer.jsp"%>
 </body>
 </html>
 
-<%-- 
-    Document   : index
-    Created on : Mar 7, 2022, 12:40:13 PM
-    Author     : MeGa
---%>
 
 
 <%--  <%@page import="com.model.User"%>

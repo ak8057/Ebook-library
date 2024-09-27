@@ -1,8 +1,4 @@
-<%-- 
-    Document   : edit_profile
-    Created on : Mar 12, 2022, 1:31:11 AM
-    Author     : MeGa
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

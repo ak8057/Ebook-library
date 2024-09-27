@@ -1,8 +1,4 @@
-<%-- 
-    Document   : order
-    Created on : Mar 12, 2022, 1:51:48 AM
-    Author     : MeGa
---%>
+
 <%@page import="com.model.BookOrder"%>
 <%@page import="java.util.List"%>
 <%@page import="com.connection.DBConnection"%>

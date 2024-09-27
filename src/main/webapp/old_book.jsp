@@ -1,8 +1,4 @@
-<%-- 
-    Document   : old_book
-    Created on : Mar 12, 2022, 4:33:52 PM
-    Author     : MeGa
---%>
+
 <%@page import="com.model.Books"%>
 <%@page import="java.util.List"%>
 <%@page import="com.connection.DBConnection"%>

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : view_book_details
-    Created on : Mar 11, 2022, 4:57:53 PM
-    Author     : MeGa
---%>
 
 <%@page import="com.model.Books"%>
 <%@page import="com.connection.DBConnection"%>

@@ -1,8 +1,4 @@
-<%-- 
-    Document   : add_books
-    Created on : Mar 9, 2022, 12:12:25 AM
-    Author     : MeGa
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

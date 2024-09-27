@@ -1,8 +1,4 @@
-<%-- 
-    Document   : Home
-    Created on : Mar 8, 2022, 10:56:51 PM
-    Author     : MeGa
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
