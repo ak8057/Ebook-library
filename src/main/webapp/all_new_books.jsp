@@ -1,14 +1,12 @@
 
-<%@page import="com.model.User"%>
+<%@page import="com.entity.User"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page import="java.util.List"%>
-<%@page import="com.model.Books"%>
-<%@page import="com.daoImpl.BookDaoImpl"%>
-<%@page import="com.daoImpl.BookDaoImpl"%>
-<%@page import="com.dao.BookDao"%>
-<%@page import="com.dao.BookDao"%>
-<%@page import="com.connection.DBConnection"%>
+<%@page import="com.entity.BookDtls"%>
+<%@page import="com.DAO.BookDAOImpl"%>
+<%@page import="com.DAO.BooksDAO"%>
+<%@page import="com.DB.DBConnect"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -95,9 +93,9 @@
             <h1 class="text-center">All New Books</h1>
             <div class="row p-2">
                 <%
-                    BookDao dao = new BookDaoImpl(DBConnection.getConnection());
-                    List<Books> list = dao.getAllNewBook();
-                    for (Books books : list) {
+                    BookDAOImpl dao = new BookDAOImpl(DBConnect.getConn());
+                    List<BookDtls> list = dao.getAllNewBook();
+                    for (BookDtls books : list) {
                 %>
                 <div class="col-md-3">
                     <div class="card crd-ho">
@@ -114,7 +112,7 @@
                                 <%
                                 } else {
                                 %>
-                                <a href="Cart?id=<%= books.getBookId()%>&&uid=<%= u.getUserId()%>" class="btn btn-danger btn-sm ml-3"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                <a href="Cart?id=<%= books.getBookId()%>&&uid=<%= u.getId()%>" class="btn btn-danger btn-sm ml-3"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
                                 <%
                                     }
                                 %>

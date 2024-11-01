@@ -24,7 +24,7 @@
                         <div class="card-body">
                             <h3 class="text-center">Edit Profile</h3>
                             <form action="update_user" method="post">
-                                <input type="hidden" value="${userobj.userId}" name="id">
+                                <input type="hidden" value="${userobj.id}" name="id">
                                 <div class="form-group">
                                     <label>Name *</label>
                                     <input type="text" value="${userobj.name}"  name="name" required class="form-control">
@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Phone Number *</label>
-                                    <input type="number" value="${userobj.phoneNumber}" name="number" required class="form-control">
+                                    <input type="number" value="${userobj.phno}" name="phno" required class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>

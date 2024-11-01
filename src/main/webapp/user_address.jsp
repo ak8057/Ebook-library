@@ -15,7 +15,7 @@
             <c:redirect url="login.jsp" />
         </c:if>
         <%@include file="all_component/navbar.jsp" %>
-        <h3 class="text-center">Hello, Jatender Khatri</h3>
+        <h3 class="text-center">Hello</h3>
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-6 offset-md-3">

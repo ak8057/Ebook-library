@@ -1,10 +1,10 @@
 
-<%@page import="com.model.Books"%>
+<%@page import="com.entity.BookDtls"%>
 <%@page import="java.util.List"%>
-<%@page import="com.connection.DBConnection"%>
-<%@page import="com.daoImpl.BookDaoImpl"%>
-<%@page import="com.dao.BookDao"%>
-<%@page import="com.model.User"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.BookDAOImpl"%>
+<%@page import="com.DAO.BooksDAO"%>
+<%@page import="com.entity.User"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -53,10 +53,10 @@
                     <%
                         User u = (User) session.getAttribute("userobj");
                         String email = u.getEmail();
-                        BookDao bookDao = new BookDaoImpl(DBConnection.getConnection());
-                        List<Books> list = bookDao.getUserAllOldBooks(email, "Old");
+                        BookDAOImpl bookDao = new BookDAOImpl(DBConnect.getConn());
+                        List<BookDtls> list = bookDao.getUserAllOldBooks(email, "Old");
 
-                        for (Books b : list) {
+                        for (BookDtls b : list) {
                     %>
                     <tr>
                         <th class="text-center"><img src="book/<%= b.getPhotoName()%>" style="width: 50px; height: 50px;" /></th>

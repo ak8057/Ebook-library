@@ -2,10 +2,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page import="java.util.List"%>
-<%@page import="com.model.Books"%>
-<%@page import="com.daoImpl.BookDaoImpl"%>
-<%@page import="com.dao.BookDao"%>
-<%@page import="com.connection.DBConnection"%>
+<%@page import="com.entity.BookDtls"%>
+<%@page import="com.DAO.BookDAOImpl"%>
+<%@page import="com.DAO.BooksDAO"%>
+<%@page import="com.DB.DBConnect"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -26,9 +26,9 @@
             <h1 class="text-center">All Old Books</h1>
             <div class="row p-2">
                 <%
-                    BookDao dao2 = new BookDaoImpl(DBConnection.getConnection());
-                    List<Books> list2 = dao2.getAllOldBook();
-                    for (Books books : list2) {
+                    BookDAOImpl dao2 = new BookDAOImpl(DBConnect.getConn());
+                    List<BookDtls> list2 = dao2.getAllOldBook();
+                    for (BookDtls books : list2) {
                 %>
                 <div class="col-md-3">
                     <div class="card crd-ho">

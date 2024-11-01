@@ -1,12 +1,12 @@
 
 <%@page import="java.util.List"%>
-<%@page import="com.model.Cart"%>
-<%@page import="com.model.User"%>
+<%@page import="com.entity.Cart"%>
+<%@page import="com.entity.User"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
-<%@page import="com.connection.DBConnection"%>
-<%@page import="com.daoImpl.CartDaoImpl"%>
-<%@page import="com.dao.CartDao"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.CartDaoImpl"%>
+<%@page import="com.DAO.CartDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -57,9 +57,9 @@
                                 </thead>
                                 <tbody>
                                     <%
-                                        User u = (User) session.getAttribute("userobj");
-                                        CartDao cartDao = new CartDaoImpl(DBConnection.getConnection());
-                                        List<Cart> list = cartDao.getBookByUserId(u.getUserId());
+                                        User u = (User)session.getAttribute("userobj");
+                                        CartDaoImpl cartDao = new CartDaoImpl(DBConnect.getConn());
+                                        List<Cart> list = cartDao.getBookByUserId(u.getId());
                                         Double totalPrice = 0.00;
                                         for (Cart c : list) {
                                             totalPrice = c.getTotalPrice();
@@ -91,7 +91,7 @@
                             <h3 class="text-center text-success">Your Details for Order</h3>
                             <hr>
                             <form action="order" method="post">
-                                <input type="hidden" name="id" value="${userobj.userId}">
+                                <input type="hidden" name="id" value="${userobj.id}">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Name *</label>
@@ -105,7 +105,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Phone Number *</label>
-                                        <input type="number" class="form-control" id="inputEmail4" required value="<%= u.getPhoneNumber()%>" name="number">
+                                        <input type="number" class="form-control" id="inputEmail4" required value="<%= u.getPhno()%>" name="number">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Address *</label>

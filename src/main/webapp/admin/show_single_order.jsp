@@ -3,10 +3,10 @@
     Created on : Mar 13, 2022, 10:28:36 PM
     Author     : MeGa
 --%>
-<%@page import="com.model.BookOrder"%>
-<%@page import="com.connection.DBConnection"%>
-<%@page import="com.daoImpl.BookOrderDaoImpl"%>
-<%@page import="com.dao.BookOrderDao"%>
+<%@page import="com.entity.BookOrder"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.BookOrderDaoImpl"%>
+<%@page import="com.DAO.BookOrderDao"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -26,7 +26,7 @@
         <div class="container">
             <% 
                 String orderId = request.getParameter("orderId");
-                BookOrderDao bookOrderDao = new BookOrderDaoImpl(DBConnection.getConnection());
+                BookOrderDaoImpl bookOrderDao = new BookOrderDaoImpl(DBConnect.getConn());
                 BookOrder b = bookOrderDao.getBookByOrderId(orderId);
             %>
             <div class="row">

@@ -1,8 +1,8 @@
 
-<%@page import="com.model.Books"%>
-<%@page import="com.connection.DBConnection"%>
-<%@page import="com.daoImpl.BookDaoImpl"%>
-<%@page import="com.dao.BookDao"%>
+<%@page import="com.entity.BookDtls"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.BookDAOImpl"%>
+<%@page import="com.DAO.BooksDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,8 +16,8 @@
 
         <%
             Integer id = Integer.parseInt(request.getParameter("id"));
-            BookDao bookDao = new BookDaoImpl(DBConnection.getConnection());
-            Books b = bookDao.getBookById(id);
+            BookDAOImpl bookDao = new BookDAOImpl(DBConnect.getConn());
+            BookDtls b = bookDao.getBookById(id);
         %>
         <div class="container p-3">
             <div class="row">

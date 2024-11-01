@@ -1,14 +1,10 @@
-<%-- 
-    Document   : all_books
-    Created on : Mar 9, 2022, 12:14:49 AM
-    Author     : MeGa
---%>
-<%@page import="com.model.User"%>
-<%@page import="com.model.BookOrder"%>
+
+<%@page import="com.entity.User"%>
+<%@page import="com.entity.BookOrder"%>
 <%@page import="java.util.List"%>
-<%@page import="com.connection.DBConnection"%>
-<%@page import="com.daoImpl.BookOrderDaoImpl"%>
-<%@page import="com.dao.BookOrderDao"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="com.DAO.BookOrderDaoImpl"%>
+<%@page import="com.DAO.BookOrderDao"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -50,7 +46,7 @@
                 <tbody>
                     <%
                         User u = (User)session.getAttribute("userobj");
-                        BookOrderDao bookDao = new BookOrderDaoImpl(DBConnection.getConnection());
+                        BookOrderDaoImpl bookDao = new BookOrderDaoImpl(DBConnect.getConn());
                         List<BookOrder> list = bookDao.getAllBookByAdmin();
                         for (BookOrder b : list) {
                     %>
