@@ -1,8 +1,4 @@
-<%-- 
-    Document   : add_books
-    Created on : Mar 9, 2022, 12:12:25 AM
-    Author     : MeGa
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page isELIgnored="false" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -41,7 +37,7 @@
                                 <c:remove var="failedMsg" />
                             </c:if>
                             <h3 class="text-center">Add Books</h3>
-                            <form action="../add_book" method="post" enctype="multipart/form-data">
+                            <form action="../add_books" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                     <label>Book Name *</label>
                                     <input type="text" name="bookName" class="form-control" aria-describedby="emailHelp" required>
